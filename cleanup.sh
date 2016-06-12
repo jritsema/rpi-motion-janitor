@@ -1,4 +1,10 @@
 #!/bin/bash
+echo -------------------------
+echo starting motion-janitor
+echo -------------------------
+date
+echo ""
+echo deleting motion directories older than $OLDER_THAN_DAYS days
+echo ""
 
-# delete directories older than 30 days
-find /motion -type d -mtime +30 | xargs rm -rf
+find /motion -type d -mtime +$OLDER_THAN_DAYS | xargs rm -rf
