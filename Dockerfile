@@ -8,6 +8,6 @@ RUN apk update && \
 # add crontab schedule and script and make it executable
 ADD ./crontab /etc/crontabs/root
 ADD ./cleanup.sh /etc/crontabs/
-RUN chmod -R +x /etc/crontabs/cleanup.sh
+RUN chmod +x /etc/crontabs/cleanup.sh
 
 CMD ["crond", "-f", "-d", "8"]
