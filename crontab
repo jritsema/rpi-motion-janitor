@@ -1,2 +1,2 @@
-0 4 * * * /etc/crontabs/cleanup.sh
+0 5 * * * /etc/crontabs/cleanup.sh
 
